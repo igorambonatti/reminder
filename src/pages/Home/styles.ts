@@ -1,11 +1,14 @@
+import breakpoints from '@styles/breakpoints'
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100vh;
   justify-content: center;
   align-items: center;
+  @media ${breakpoints.m} {
+    height: 100vh;
+  }
 `
 export const Container = styled.div`
   display: flex;
@@ -13,10 +16,16 @@ export const Container = styled.div`
   flex: 1;
   width: 100%;
   max-width: 1200px;
-  max-height: 746px;
+  @media ${breakpoints.m} {
+    max-height: 746px;
+  }
 `
 export const Logo = styled.img`
   margin-bottom: 3rem;
+  margin-top: 2rem;
+  @media ${breakpoints.m} {
+    margin-top: 0;
+  }
 `
 export const Content = styled.div`
   display: flex;
@@ -26,6 +35,10 @@ export const Content = styled.div`
   background-color: ${(props) => props.theme.colors.white};
   color: ${(props) => props.theme.colors.white};
   overflow: hidden;
+  flex-direction: column-reverse;
+  @media ${breakpoints.m} {
+    flex-direction: row;
+  }
 `
 export const Reminder = styled.div`
   display: flex;
@@ -35,8 +48,10 @@ export const Image = styled.div``
 export const CalendarContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 28rem;
   background: linear-gradient(180deg, #101277 0%, #421f91 100%);
+  @media ${breakpoints.m} {
+    width: 28rem;
+  }
 `
 export const Top = styled.div`
   display: flex;

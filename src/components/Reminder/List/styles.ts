@@ -1,4 +1,5 @@
 import { Button } from '@components/Button'
+import breakpoints from '@styles/breakpoints'
 import styled from 'styled-components'
 
 interface IColorBar {
@@ -35,11 +36,18 @@ export const Top = styled.div`
 `
 export const Date = styled.span`
   color: ${(props) => props.theme.colors.font};
-  font-size: 22px;
+
   font-weight: normal;
+  font-size: 0.8rem;
+  @media ${breakpoints.m} {
+    font-size: 1.3rem;
+  }
 `
 export const NoResultsImage = styled.img`
-  max-width: 450px;
+  max-width: 300px;
+  @media ${breakpoints.m} {
+    max-width: 450px;
+  }
 `
 export const AddButton = styled(Button)`
   background: linear-gradient(90deg, #ff465d 0%, #bc46ba 100%);
@@ -103,7 +111,9 @@ export const CardContent = styled.div`
 `
 export const Scroll = styled.div`
   overflow-y: scroll;
-  margin: 0 1.5rem 0 0;
+  @media ${breakpoints.m} {
+    margin: 0 1.5rem 0 0;
+  }
 
   &::-webkit-scrollbar {
     width: 8px;

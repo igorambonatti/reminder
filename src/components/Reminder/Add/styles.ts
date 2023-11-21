@@ -1,4 +1,5 @@
 import { Button } from '@components/Button'
+import breakpoints from '@styles/breakpoints'
 import styled from 'styled-components'
 
 interface ColorButton {
@@ -30,8 +31,10 @@ export const Date = styled.span`
   font-weight: normal;
 `
 export const InputGroup = styled.div`
-  display: flex;
   gap: 0.4rem;
+  @media ${breakpoints.m} {
+    display: flex;
+  }
 `
 export const ColorGroup = styled.div`
   display: flex;
@@ -72,6 +75,10 @@ export const Break = styled.div`
   flex: 1;
   width: 100%;
   align-items: center;
+  margin: 2rem 0;
+  @media ${breakpoints.m} {
+    margin: 0;
+  }
   > div {
     height: 1px;
     width: 100%;
